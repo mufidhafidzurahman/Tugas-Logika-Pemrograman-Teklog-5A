@@ -1,0 +1,38 @@
+/* Page-specific styles */
+
+/* Hero */
+.hero { padding-block: var(--space-8) var(--space-9); }
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: var(--space-8);
+  align-items: center;
+}
+.hero__title { margin-bottom: var(--space-5); }
+.hero__intro { font-size: var(--fs-500); color: var(--color-text-muted); max-width: 36rem; margin-bottom: var(--space-6); }
+.hero__cta { margin-bottom: var(--space-6); }
+.hero__photo { position: relative; max-width: 26rem; justify-self: end; width: 100%; }
+.hero__photo .media { aspect-ratio: 4 / 5; box-shadow: var(--shadow-md); }
+.hero__photo::before {
+  content: "";
+  position: absolute;
+  inset: var(--space-4) calc(var(--space-4) * -1) calc(var(--space-4) * -1) var(--space-4);
+  border: 2px solid var(--color-orange);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+
+/* Pillars */
+.pillar__index {
+  font-family: var(--font-display);
+  font-size: var(--fs-600);
+  color: var(--color-accent-text);
+  line-height: 1;
+}
+
+/* Stub / placeholder pages (Phase 0) */
+.stub { padding-block: var(--space-9); max-width: 44rem; }
+
+/* Design-system page helpers */
+.swatch { height: 4.5rem; border-radius: var(--radius-sm); border: 1px solid var(--color-line); }
+.ds-block + .ds-block { margin-top: var(--space-7); }

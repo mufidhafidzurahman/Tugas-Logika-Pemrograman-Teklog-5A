@@ -1,0 +1,69 @@
+/* Design tokens — single source of truth for color, type, spacing, motion. */
+:root {
+  /* Brand palette (from master prompt) */
+  --color-bg: #f7f5ef;        /* off-white, main background */
+  --color-navy: #14213d;      /* structure / strong text */
+  --color-orange: #fca311;    /* accent: CTA fills and markers only */
+  --color-charcoal: #232323;  /* body text */
+  --color-white: #ffffff;     /* cards, contrast surfaces */
+
+  /* Derived (kept here so nothing is hard-coded elsewhere) */
+  --color-text: var(--color-charcoal);
+  --color-text-strong: var(--color-navy);
+  --color-text-muted: #596070;          /* ≈5.9:1 on --color-bg */
+  --color-accent-text: #8a4f00;         /* orange family that passes AA for small text on --color-bg */
+  --color-line: rgba(20, 33, 61, 0.14);
+  --color-line-strong: rgba(20, 33, 61, 0.32);
+  --color-surface: var(--color-white);
+  --color-surface-alt: #efece3;
+  --color-success: #1b6b3a;
+  --color-success-bg: #e6f3ea;
+  --color-error: #a4161a;
+  --color-error-bg: #fbe9e9;
+  --color-warning: #7a4b00;
+  --color-warning-bg: #fff3d6;
+  --color-focus: var(--color-navy);
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-300: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --fs-400: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --fs-500: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --fs-600: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --fs-700: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --fs-800: clamp(2.25rem, 1.6rem + 3vw, 3.75rem);
+  --lh-tight: 1.1;
+  --lh-snug: 1.3;
+  --lh-body: 1.65;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+
+  /* Layout */
+  --container: 72rem;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --header-h: 4.25rem;
+
+  /* Shape and depth */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 33, 61, 0.08);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 220ms;
+}

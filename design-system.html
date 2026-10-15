@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design system — internal</title>
+  <meta name="robots" content="noindex, nofollow"><!-- Internal reference; remove this page before launch (Phase 4) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="site-header"></div>
+  <main id="main" class="container section">
+    <span class="eyebrow">Internal reference</span>
+    <h1>Design system</h1>
+    <p class="lead">Every component the public site and admin dashboard will reuse, in all states.</p>
+
+    <section class="ds-block" aria-labelledby="ds-colors">
+      <h2 id="ds-colors">Color tokens</h2>
+      <div class="grid grid--4">
+        <div><div class="swatch" style="background:var(--color-bg)"></div><p class="card__meta">bg #F7F5EF</p></div>
+        <div><div class="swatch" style="background:var(--color-navy)"></div><p class="card__meta">navy #14213D</p></div>
+        <div><div class="swatch" style="background:var(--color-orange)"></div><p class="card__meta">orange #FCA311 (fills only)</p></div>
+        <div><div class="swatch" style="background:var(--color-charcoal)"></div><p class="card__meta">charcoal #232323</p></div>
+      </div>
+    </section>
+
+    <section class="ds-block" aria-labelledby="ds-type">
+      <h2 id="ds-type">Typography</h2>
+      <h1 style="font-size:var(--fs-800)">Heading 1 — Fraunces</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <p>Body text in Inter at a comfortable measure. <a href="#ds-type">Inline link</a> with visible underline.</p>
+    </section>
+
+    <section class="ds-block" aria-labelledby="ds-buttons">
+      <h2 id="ds-buttons">Buttons</h2>
+      <div class="cluster">
+        <button class="btn btn--primary" type="button">Primary</button>
+        <button class="btn btn--secondary" type="button">Secondary</button>
+        <button class="btn btn--ghost" type="button">Ghost</button>
+        <button class="btn btn--primary" type="button" disabled>Disabled</button>
+        <button class="btn btn--primary is-loading" type="button" aria-busy="true"><span class="visually-hidden">Loading</span>Loading</button>
+      </div>
+    </section>
+
+    <section class="ds-block" aria-labelledby="ds-cards">
+      <h2 id="ds-cards">Cards and badges</h2>
+      <div class="grid grid--3">
+        <article class="card">
+          <div class="cluster"><span class="badge badge--success">✓ Published</span><span class="badge badge--warning">● In progress</span><span class="badge badge--muted">Draft</span></div>
+          <h3 class="card__title">Project card title</h3>
+          <p>Short summary text. Status is always a text label, never only a color.</p>
+          <span class="card__meta">Tools: Python · Excel</span>
+        </article>
+        <a class="card" href="#ds-cards">
+          <h3 class="card__title">Linked card</h3>
+          <p>Hover lifts the card; focus shows a visible ring.</p>
+        </a>
+        <div class="empty-state"><p>Empty state: nothing matches this filter.</p></div>
+      </div>
+    </section>
+
+    <section class="ds-block" aria-labelledby="ds-forms">
+      <h2 id="ds-forms">Forms and feedback</h2>
+      <form class="stack" style="max-width:32rem" novalidate>
+        <div class="field">
+          <label class="field__label" for="ds-name">Name</label>
+          <input class="input" id="ds-name" type="text" autocomplete="name">
+          <span class="field__hint">Helper text sits under the field.</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="ds-email">Email</label>
+          <input class="input" id="ds-email" type="email" aria-invalid="true" aria-describedby="ds-email-err" value="not-an-email">
+          <span class="field__error" id="ds-email-err">Error: enter a valid email address.</span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="ds-msg">Message</label>
+          <textarea class="textarea" id="ds-msg"></textarea>
+        </div>
+        <div class="alert alert--success" role="status">✓ Success: message saved.</div>
+        <div class="alert alert--error" role="alert">✕ Error: something went wrong.</div>
+        <div class="alert alert--info" role="status">ℹ Info message.</div>
+        <div class="skeleton" style="height:3rem" aria-hidden="true"></div>
+      </form>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module" src="/assets/js/navigation.js"></script>
+</body>
+</html>

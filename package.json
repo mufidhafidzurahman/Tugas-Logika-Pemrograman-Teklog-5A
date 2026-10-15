@@ -1,0 +1,9 @@
+{
+  "name": "mufid-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mufid Hafidzurahman — Personal Portfolio & Logistics Innovation Lab",
+  "scripts": {
+    "dev": "npx --yes serve@14 -l 3000 ."
+  }
+}
